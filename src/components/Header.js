@@ -26,11 +26,14 @@ class Header extends React.Component {
     return (
       <header data-testid="header-component">
         {
-          isLoading ? <Loading /> : <nav>
-            <Link to="/search" data-testid="link-to-search">Search</Link>
-            <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-            <Link to="/profile" data-testid="link-to-profile">Profile</Link>
-          </nav>
+          isLoading ? <Loading />
+            : (
+              <nav>
+                <Link to="/search" data-testid="link-to-search">Search</Link>
+                <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
+                <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+              </nav>
+            )
         }
         <p data-testid="header-user-name">{login}</p>
       </header>
