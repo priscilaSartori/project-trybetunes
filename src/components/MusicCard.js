@@ -19,10 +19,8 @@ class Music extends React.Component {
 }
 
 Music.propTypes = {
-  musicAlbum: PropTypes.shape({
-    trackName: PropTypes.string,
-    previewUrl: PropTypes.string,
-  }).isRequired,
+  trackName: PropTypes.string.isRequired,
+  previewUrl: PropTypes.string.isRequired,
 };
 
 export default Music;
