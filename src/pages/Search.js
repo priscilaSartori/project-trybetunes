@@ -34,7 +34,6 @@ class Search extends React.Component {
     this.setState({ isLoading: true, pesquisa: nome, frase: true });
     const filtro = await searchAlbumsAPI(nome);
     this.setState({ filter: filtro, nome: '', isLoading: false });
-    console.log(filtro);
   };
 
   render() {
@@ -84,8 +83,8 @@ class Search extends React.Component {
               {' '}
               {pesquisa}
             </h4>)}
-          {filter.length === 0
-            ? <h2>Nenhum álbum foi encontrado</h2> : (filter.map((artista) => (
+          { filter.length === 0 ? <h2>Nenhum álbum foi encontrado</h2>
+            : (filter.map((artista) => (
               <Link
                 to={ `/album/${artista.collectionId}` }
                 data-testid={ `link-to-album-${artista.collectionId}` }
