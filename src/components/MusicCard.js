@@ -1,31 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../pages/Loading';
 
 class Music extends React.Component {
   state = {
     favorita: false,
-    isLoading: false,
+    isLoading: true,
   };
 
-  // componentDidMount() {
-  //   this.selectFavorite();
-  // }
+  componentDidMount() {
+    this.favoriteMusics();
+  }
 
   onInputChange = async ({ target }) => {
     this.setState({ favorita: target.checked, isLoading: true });
+    // console.log(favorita);
+    // console.log(favorita.map((favorit) => favorit.checked === true));
     const { faixa } = this.props;
     await addSong(faixa);
     this.setState({ isLoading: false });
   };
 
-  // selectFavorite = async () => {
-
-  // };
+  favoriteMusics = async () => {
+    const { faixa: { trackId } } = this.props;
+    const musicsFavorites = await getFavoriteSongs();
+    const salveFav = musicsFavorites.some((faixaFav) => faixaFav.trackId === trackId);
+    this.setState({ isLoading: false, favorita: salveFav });
+  };
 
   render() {
-    const { trackName, previewUrl, trackId } = this.props;
+    const { faixa: { trackName, previewUrl, trackId } } = this.props;
     const { favorita, isLoading } = this.state;
     return (
       <div>
