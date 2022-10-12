@@ -7,23 +7,12 @@ class Music extends React.Component {
   state = {
     favorita: false,
     isLoading: true,
+    checked: '',
   };
 
   componentDidMount() {
     this.favoriteMusics();
   }
-
-  onInputChange = async ({ target }) => {
-    this.setState({ favorita: target.checked, isLoading: true });
-    const { faixa } = this.props;
-    if (target.checked === true) {
-      await addSong(faixa);
-      this.setState({ isLoading: false });
-    } else {
-      await removeSong(faixa);
-      this.setState({ isLoading: false });
-    }
-  };
 
   favoriteMusics = async () => {
     const { faixa: { trackId } } = this.props;
@@ -32,9 +21,22 @@ class Music extends React.Component {
     this.setState({ isLoading: false, favorita: salveFav });
   };
 
+  onInputChange = async ({ target }) => {
+    const { faixa } = this.props;
+    this.setState({ favorita: target.checked, isLoading: true });
+    if (target.checked === true) {
+      await addSong(faixa);
+      this.setState({ isLoading: false });
+    } else {
+      await removeSong(faixa);
+      this.setState({ isLoading: false, checked: target.id });
+    }
+  };
+
   render() {
     const { faixa: { trackName, previewUrl, trackId } } = this.props;
-    const { favorita, isLoading } = this.state;
+    const { favorita, isLoading, checked } = this.state;
+    console.log(checked);
     return (
       <div>
         {isLoading ? <Loading />
@@ -51,7 +53,7 @@ class Music extends React.Component {
                 Favorita
                 <input
                   data-testid={ `checkbox-music-${trackId}` }
-                  id="favorita"
+                  id={ trackId }
                   type="checkbox"
                   name="favorita"
                   checked={ favorita }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
@@ -17,6 +18,7 @@ class Favorites extends React.Component {
 
   render() {
     const { favoritas } = this.state;
+    console.log(favoritas);
     return (
       <div>
         <Header />
@@ -34,5 +36,14 @@ class Favorites extends React.Component {
     );
   }
 }
+
+Favorites.propTypes = {
+  checked: PropTypes.string.isRequired,
+  faixa: PropTypes.shape({
+    trackName: PropTypes.string,
+    previewUrl: PropTypes.string,
+    trackId: PropTypes.number,
+  }).isRequired,
+};
 
 export default Favorites;
