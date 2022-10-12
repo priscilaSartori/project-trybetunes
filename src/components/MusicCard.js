@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from '../pages/Loading';
 
 class Music extends React.Component {
@@ -15,11 +15,14 @@ class Music extends React.Component {
 
   onInputChange = async ({ target }) => {
     this.setState({ favorita: target.checked, isLoading: true });
-    // console.log(favorita);
-    // console.log(favorita.map((favorit) => favorit.checked === true));
     const { faixa } = this.props;
-    await addSong(faixa);
-    this.setState({ isLoading: false });
+    if (target.checked === true) {
+      await addSong(faixa);
+      this.setState({ isLoading: false });
+    } else {
+      await removeSong(faixa);
+      this.setState({ isLoading: false });
+    }
   };
 
   favoriteMusics = async () => {
@@ -34,7 +37,7 @@ class Music extends React.Component {
     const { favorita, isLoading } = this.state;
     return (
       <div>
-        { isLoading ? <Loading />
+        {isLoading ? <Loading />
           : (
             <div>
               <h4>{trackName}</h4>

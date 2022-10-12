@@ -83,7 +83,7 @@ class Search extends React.Component {
               {' '}
               {pesquisa}
             </h4>)}
-          { filter.length === 0 ? <h2>Nenhum álbum foi encontrado</h2>
+          {filter.length === 0 ? <h2>Nenhum álbum foi encontrado</h2>
             : (filter.map((artista) => (
               <Link
                 to={ `/album/${artista.collectionId}` }
