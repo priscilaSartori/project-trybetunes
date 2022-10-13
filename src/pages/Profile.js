@@ -34,7 +34,7 @@ class Profile extends React.Component {
               <h2>{dados.description}</h2>
               <img src={ dados.image } alt="profile" data-testid="profile-image" />
               <Link to="/profile/edit">
-                <button type="button">Editar perfil</button>
+                <button type="button" id="edit">Editar perfil</button>
               </Link>
             </div>
           )}
