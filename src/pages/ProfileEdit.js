@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from './Loading';
 import { getUser, updateUser } from '../services/userAPI';
@@ -49,6 +49,7 @@ class ProfileEdit extends React.Component {
 
   uptadeInfo = async () => {
     this.setState({ isLoading: true });
+    const { history: { push } } = this.props;
     const filtro = await updateUser();
     const { name, email, description, image } = filtro;
     this.setState({
@@ -58,6 +59,7 @@ class ProfileEdit extends React.Component {
       description,
       image,
     });
+    push('./profile');
   };
 
   render() {
@@ -113,16 +115,14 @@ class ProfileEdit extends React.Component {
                   onChange={ this.onInputChange }
                 />
               </label>
-              <Link to="/profile">
-                <button
-                  data-testid="edit-button-save"
-                  type="button"
-                  disabled={ evaluation }
-                  onClick={ this.uptadeInfo }
-                >
-                  Enviar
-                </button>
-              </Link>
+              <button
+                data-testid="edit-button-save"
+                type="button"
+                disabled={ evaluation }
+                onClick={ this.uptadeInfo }
+              >
+                Enviar
+              </button>
             </form>
           )}
       </div>
@@ -130,10 +130,10 @@ class ProfileEdit extends React.Component {
   }
 }
 
-// ProfileEdit.propTypes = {
-//   history: PropTypes.shape({
-//     push: PropTypes.func.isRequired,
-//   }).isRequired,
-// };
+ProfileEdit.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default ProfileEdit;

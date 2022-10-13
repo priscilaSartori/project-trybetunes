@@ -18,7 +18,6 @@ class Favorites extends React.Component {
 
   render() {
     const { favoritas } = this.state;
-    console.log(favoritas);
     return (
       <div>
         <Header />
@@ -38,7 +37,6 @@ class Favorites extends React.Component {
 }
 
 Favorites.propTypes = {
-  checked: PropTypes.string.isRequired,
   faixa: PropTypes.shape({
     trackName: PropTypes.string,
     previewUrl: PropTypes.string,
