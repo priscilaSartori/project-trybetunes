@@ -21,13 +21,12 @@ class ProfileEdit extends React.Component {
   infoPessoa = async () => {
     this.setState({ isLoading: true });
     const filtro = await getUser();
-    const { name, email, description, image } = filtro;
     this.setState({
       isLoading: false,
-      name,
-      email,
-      description,
-      image,
+      name: filtro.name,
+      email: filtro.email,
+      description: filtro.description,
+      image: filtro.image,
     });
   };
 
@@ -40,30 +39,32 @@ class ProfileEdit extends React.Component {
     const { name, email, description, image } = this.state;
     const regex = /^([a-z0-9_\-.]+)@([a-z0-9_\-.]+)\.([a-z]{2,5})$/;
     const emailValido = regex.test(email);
-    if (emailValido && name && email && description && image) {
+    const infosPes = name !== '' && email !== '' && description !== '' && image !== '';
+    if (emailValido && infosPes) {
       this.setState({ evaluation: false });
-    } else {
-      this.setState({ evaluation: true });
     }
   };
 
   uptadeInfo = async () => {
-    this.setState({ isLoading: true });
+    const { name, email, description, image } = this.state;
+    const info = { name, email, description, image };
+    console.log(info);
     const { history: { push } } = this.props;
-    const filtro = await updateUser();
-    const { name, email, description, image } = filtro;
-    this.setState({
-      isLoading: false,
+    this.setState({ isLoading: true });
+    await updateUser(info);
+    this.setState({ name: '', email: '', description: '', image: '' });
+    push('/profile');
+  };
+
+  render() {
+    const {
+      isLoading,
       name,
       email,
       description,
       image,
-    });
-    push('./profile');
-  };
-
-  render() {
-    const { isLoading, name, email, description, image, evaluation } = this.state;
+      evaluation,
+    } = this.state;
     return (
       <div>
         <Header />
@@ -78,6 +79,7 @@ class ProfileEdit extends React.Component {
                   id="name"
                   name="name"
                   type="text"
+                  placeholder="Nome"
                   value={ name }
                   onChange={ this.onInputChange }
                 />
@@ -89,6 +91,7 @@ class ProfileEdit extends React.Component {
                   id="email"
                   name="email"
                   type="text"
+                  placeholder="email"
                   value={ email }
                   onChange={ this.onInputChange }
                 />
@@ -100,6 +103,7 @@ class ProfileEdit extends React.Component {
                   id="description"
                   name="description"
                   type="text"
+                  placeholder="Descrição"
                   value={ description }
                   onChange={ this.onInputChange }
                 />
@@ -111,17 +115,18 @@ class ProfileEdit extends React.Component {
                   id="image"
                   name="image"
                   type="text"
+                  placeholder="Image"
                   value={ image }
                   onChange={ this.onInputChange }
                 />
               </label>
               <button
                 data-testid="edit-button-save"
-                type="button"
+                type="submit"
                 disabled={ evaluation }
                 onClick={ this.uptadeInfo }
               >
-                Enviar
+                Editar perfil
               </button>
             </form>
           )}
