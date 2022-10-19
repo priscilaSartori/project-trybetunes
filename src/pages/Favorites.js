@@ -1,47 +1,50 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
-import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import Loading from './Loading';
 
 class Favorites extends React.Component {
-  state = { favoritas: [] };
+  state = { favorites: [], isLoading: false };
 
-  componentDidMount() {
-    this.musicsFavorites();
+  async componentDidMount() {
+    const favorites = await getFavoriteSongs() || '[]';
+    this.setState({ favorites });
   }
 
-  musicsFavorites = async () => {
-    const favorites = await getFavoriteSongs();
-    this.setState({ favoritas: favorites });
+  onFavorite = async (music) => {
+    const { favorites: favoriteList } = this.state;
+    this.setState({ isLoading: true });
+    const favorites = favoriteList.filter((fav) => fav.trackId !== music.trackId);
+    await removeSong(music);
+    this.setState({ favorites, isLoading: false });
   };
 
   render() {
-    const { favoritas } = this.state;
+    const { favorites, isLoading } = this.state;
     return (
       <div>
         <Header />
         <div data-testid="page-favorites" />
-        {favoritas.map((faixa) => (
-          <div key={ faixa.trackId }>
-            <MusicCard
-              faixa={ faixa }
-              trackName={ faixa.trackName }
-              previewUrl={ faixa.previewUrl }
-              trackId={ faixa.trackId }
-            />
-          </div>))}
+        {favorites !== undefined
+          && (
+            favorites.map((faixa) => (
+              <div key={ faixa.trackId }>
+                {isLoading ? <Loading />
+                  : (
+                    <MusicCard
+                      faixa={ faixa }
+                      trackName={ faixa.trackName }
+                      previewUrl={ faixa.previewUrl }
+                      trackId={ faixa.trackId }
+                      isFavorite
+                      addFavorite={ this.onFavorite }
+                    />
+                  )}
+              </div>)))}
       </div>
     );
   }
 }
-
-Favorites.propTypes = {
-  faixa: PropTypes.shape({
-    trackName: PropTypes.string,
-    previewUrl: PropTypes.string,
-    trackId: PropTypes.number,
-  }).isRequired,
-};
 
 export default Favorites;
