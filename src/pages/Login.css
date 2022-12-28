@@ -1,0 +1,47 @@
+.fundoAzul {
+  background: linear-gradient(123.66deg, rgb(0, 59, 229) 12.08%, rgb(0, 213, 226) 86.52%);
+  height: 100%;
+  width: 100%;
+}
+
+.fundoBranco {
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 26px rgba(68, 73, 85, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: center;
+  left: 265px;
+  position: absolute;
+  top: 135px;
+  width: 750px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.name {
+  border: 1px solid rgb(0, 59, 229);
+  border-radius: 100px;
+  height: 40px;
+  left: 440px;
+  margin: 5px;
+  top: 415px;
+  width: 400px;
+}
+
+.entrar {
+  background: rgb(0, 59, 229);
+  border-radius: 100px;
+  color: white;
+  height: 40px;
+  left: 440px;
+  margin: 5px;
+  top: 464px;
+  width: 400px;
+}

@@ -1,0 +1,86 @@
+.header {
+  background: #FFFFFF;
+  color: #444955;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  height: 720px;
+  left: 0;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  position: absolute;
+  text-transform: capitalize;
+  top: 0;
+  width: 250px;
+}
+
+.logoHeader {
+  height: 95.71px;
+  left: 40px;
+  position: absolute;
+  top: 33.59px;
+  width: 170.81px;
+}
+
+.searchHeader {
+  bottom: 59.29%;
+  color : rgba(92, 96, 106, 1);
+  left: 3.12%;
+  position: absolute;
+  right: 95.22%;
+  top: 37.78%;
+}
+
+.favoritoSearch {
+  bottom: 48.61%;
+  color: rgba(192, 195, 201, 1);
+  left: 2.97%;
+  position: absolute;
+  right: 95.23%;
+  top: 48.19%;
+}
+
+.profileSearch {
+  bottom: 37.65%;
+  color: rgba(192, 195, 201, 1);
+  left: 2.97%;
+  position: absolute;
+  right: 95.08%;
+  top: 58.89%;
+}
+
+.nameSearch {
+  font-weight: 700;
+  height: 16px;
+  left: 84px;
+  position: absolute;
+  top: 37.78%;
+  width: 77px;
+}
+
+.nameFavorite {
+  font-weight: 400;
+  height: 16px;
+  left: 84px;
+  position: absolute;
+  top: 48.19%;
+  width: 75px;
+}
+
+.nameProfile {
+  font-weight: 400;
+  height: 16px;
+  left: 84px;
+  position: absolute;
+  top: 58.89%;
+  width: 42px;
+}
+
+.username {
+  font-weight: 400;
+  height: 16px;
+  left: 93px;
+  position: absolute;
+  top: 664px;
+  width: 83px;
+}

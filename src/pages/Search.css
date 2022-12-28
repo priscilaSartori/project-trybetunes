@@ -1,0 +1,75 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  height: 486px;
+  width: 1030px;
+}
+
+.fundoAzulSearch {
+  background: linear-gradient(123.66deg, rgb(0, 59, 229) 12.08%, rgb(0, 213, 226) 86.52%);
+  left: 250px;
+  position: absolute;
+  width: 1030px;
+}
+
+.search {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 23px;
+  height: 40px;
+  left: 504px;
+  position: absolute;
+  top: 97px;
+  width: 400px;
+}
+
+.imgSearch {
+  bottom: 82.34%;
+  left: 64%;
+  position: absolute;
+  right: 30.38%;
+  top: 19.5%;
+}
+
+.btnProcurar {
+  background: #00D5E2;
+  border-radius: 23px;
+  color: white;
+  height: 40px;
+  left: 913px;
+  letter-spacing: 0.03em;
+  line-height: 14px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 97px;
+  width: 114px;
+}
+
+.bgBrancoCinza {
+  background: #EFF3F9;
+  height: 486px;
+  left: 250px;
+  position: absolute;
+  top: 234px;
+  width: 1030px;
+}
+
+.busca {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.resultados {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.texto {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 12.0698px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  width: 147px;
+}

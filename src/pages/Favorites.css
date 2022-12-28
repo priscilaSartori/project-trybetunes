@@ -1,0 +1,47 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  height: 486px;
+  width: 1030px;
+}
+
+.fundoAzulSearch {
+  background: linear-gradient(123.66deg, rgb(0, 59, 229) 12.08%, rgb(0, 213, 226) 86.52%);
+  left: 250px;
+  position: absolute;
+  width: 1030px;
+}
+
+.textoFavoritas {
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 24.89px;
+  left: 596px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 101px;
+  width: 337.2px;
+}
+
+.bgBrancoCinza {
+  align-items: center;
+  /* background: rgb(173, 216, 230); */
+  background: #EFF3F9;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 250px;
+  position: absolute;
+  top: 234px;
+  width: 1030px;
+}
+
+.musicasFavoritas {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}

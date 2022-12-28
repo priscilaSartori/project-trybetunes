@@ -1,0 +1,34 @@
+.fundoAzul {
+  background: linear-gradient(123.66deg, rgb(0, 59, 229) 12.08%, rgb(0, 213, 226) 86.52%);
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.vetor {
+  bottom: 49.17%;
+  left: 47.65%;
+  position: absolute;
+  right: 47.58%;
+  top: 42.36%;
+}
+
+.carregando {
+  color: rgba(0, 59, 229, 1);
+  font-family: 'Epilogue';
+  font-size: 48.9205px;
+  font-style: normal;
+  font-weight: 400;
+  height: 50px;
+  left: 479.45px;
+  line-height: 50px;
+  position: absolute;
+  text-align: center;
+  top: 403px;
+  width: 322px;
+}

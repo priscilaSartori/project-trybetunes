@@ -1,0 +1,35 @@
+.fundoAzul {
+  background: linear-gradient(123.66deg, rgb(0, 59, 229) 12.08%, rgb(0, 213, 226) 86.52%);
+  height: 100%;
+  width: 100%;
+}
+
+.ops {
+  color: rgb(0, 59, 229);
+  font-family: 'Epilogue';
+  font-size: 122.263px;
+  font-style: normal;
+  font-weight: 400;
+  height: 66.02px;
+  left: 288px;
+  letter-spacing: 0.02em;
+  line-height: 125px;
+  position: absolute;
+  top: 250px;
+  width: 538.57px;
+}
+
+.frase {
+  color: rgb(0, 213, 226);
+  font-family: 'Epilogue';
+  font-size: 36.6788px;
+  font-style: normal;
+  font-weight: 300;
+  height: 226.8px;
+  left: 592.43px;
+  letter-spacing: 0.02em;
+  line-height: 40px;
+  position: absolute;
+  top: 320px;
+  width: 538.57px;
+}
