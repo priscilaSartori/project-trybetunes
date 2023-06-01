@@ -48,7 +48,7 @@ class Search extends React.Component {
     } = this.state;
 
     return (
-      <div data-testid="page-search" className="divSearch">
+      <div data-testid="page-search">
         <Header />
         {
           isLoading ? <Loading />
@@ -80,26 +80,34 @@ class Search extends React.Component {
         }
         <section className="sectionSearch">
           {frase && (
-            <h4>
+            <h4 className="resultadoAlbum">
               Resultado de álbuns de:
               {' '}
               {pesquisa}
             </h4>)}
-          {filter.length === 0
-            ? <h2 className="naoEncontrado">Nenhum álbum foi encontrado</h2>
-            : (filter.map((artista) => (
-              <Link
-                to={ `/album/${artista.collectionId}` }
-                data-testid={ `link-to-album-${artista.collectionId}` }
-                key={ artista.collectionId }
-              >
-                <img src={ artista.artworkUrl100 } alt="collection" />
-                <h2>{artista.artistName}</h2>
-                <h2>{artista.collectionName}</h2>
-                <h2>{artista.collectionPrice}</h2>
-                <h2>{artista.releaseDate}</h2>
-              </Link>
-            )))}
+          <div className="divArtista">
+            {filter.length === 0
+              ? <h2 className="naoEncontrado">Nenhum álbum foi encontrado</h2>
+              : (filter.map((artista) => (
+                <Link
+                  to={ `/album/${artista.collectionId}` }
+                  data-testid={ `link-to-album-${artista.collectionId}` }
+                  key={ artista.collectionId }
+                >
+                  <div className="divAlbum">
+                    <img
+                      src={ artista.artworkUrl100 }
+                      className="imgSearch"
+                      alt="collection"
+                    />
+                    <h2 className="nameArtistSearch">{artista.artistName}</h2>
+                    <h2 className="collectionNameSearch">{artista.collectionName}</h2>
+                    <h2 className="collectionPriceSearch">{artista.collectionPrice}</h2>
+                    <h2 className="releaseDateSearch">{artista.releaseDate}</h2>
+                  </div>
+                </Link>
+              )))}
+          </div>
         </section>
       </div>
     );

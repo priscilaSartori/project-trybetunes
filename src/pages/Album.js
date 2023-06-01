@@ -5,6 +5,8 @@ import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
 import Loading from './Loading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import './Album.css';
+import bgAzul1 from '../images/bgAzul1.png';
 
 class Album extends React.Component {
   state = {
@@ -57,43 +59,37 @@ class Album extends React.Component {
 
   render() {
     const { musicAlbum, favorites, albumInfo, isLoading } = this.state;
-    console.log(musicAlbum);
     if (musicAlbum.length === 0) {
       return <Loading />;
     }
-    console.log({ favorites });
     return (
-      <div>
+      <div className="divQuadro">
         <Header />
-        <h2 data-testid="page-album"> </h2>
-        <h2 data-testid="artist-name">{albumInfo.artistName}</h2>
-        <h2 data-testid="album-name">{albumInfo.collectionName}</h2>
-        {isLoading ? <Loading />
-          : musicAlbum.map((faixa) => (
-            <MusicCard
-              key={ faixa.trackId }
-              faixa={ faixa }
-              trackName={ faixa.trackName }
-              previewUrl={ faixa.previewUrl }
-              trackId={ faixa.trackId }
-              isFavorite={ favorites.includes(faixa.trackId) }
-              addFavorite={ this.onFavorite }
-            />
-          ))}
-        {/* {musicAlbum.map((faixa) => (
-          <div key={ faixa.trackId }>
-              {isLoading ? <Loading />
-          : (
-                  <MusicCard
-                    faixa={ faixa }
-                    trackName={ faixa.trackName }
-                    previewUrl={ faixa.previewUrl }
-                    trackId={ faixa.trackId }
-                    isFavorite={ favorites.includes(faixa.id) }
-                    addFavorite={ this.onFavorite }
-                  />
-                )}
-          </div>))} */}
+        <img src={ bgAzul1 } alt="" width={ 1100 } className="imgSearch" />
+        <div className="divPageAlbum">
+          <img src={ albumInfo.artworkUrl100 } alt="imagem album" className="imgAlbum" />
+          {/* <h2 data-testid="page-album" /> */}
+          <h2 data-testid="artist-name" className="nameArtist">
+            {albumInfo.artistName}
+          </h2>
+          <h2 data-testid="album-name" className="collectionName">
+            {albumInfo.collectionName}
+          </h2>
+          <div className="faixa">
+            {isLoading ? <Loading />
+              : musicAlbum.map((faixa) => (
+                <MusicCard
+                  key={ faixa.trackId }
+                  faixa={ faixa }
+                  trackName={ faixa.trackName }
+                  previewUrl={ faixa.previewUrl }
+                  trackId={ faixa.trackId }
+                  isFavorite={ favorites.includes(faixa.trackId) }
+                  addFavorite={ this.onFavorite }
+                />
+              ))}
+          </div>
+        </div>
       </div>
     );
   }
