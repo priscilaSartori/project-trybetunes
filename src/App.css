@@ -1,0 +1,10 @@
+body {
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  width: 1500px;
+}
+
+.bgAzul {
+  background-image: url(./images/bgAzul.png);
+  height: 700px;
+  width: 100%;
+}

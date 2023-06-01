@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
+// import './Search.css';
 
 class Search extends React.Component {
   state = {
@@ -47,12 +48,12 @@ class Search extends React.Component {
     } = this.state;
 
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="divSearch">
         <Header />
         {
           isLoading ? <Loading />
             : (
-              <form>
+              <form className="formSearch">
                 <label htmlFor="name">
                   Nome
                   <input
@@ -76,7 +77,7 @@ class Search extends React.Component {
               </form>
             )
         }
-        <section>
+        <section className="sectionSearch">
           {frase && (
             <h4>
               Resultado de álbuns de:

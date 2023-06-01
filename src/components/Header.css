@@ -1,0 +1,77 @@
+header {
+  background: #FFFFFF;
+  height: 720px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 250px;
+}
+
+.search {
+  color: #444955;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 16px;
+  left: 84px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  position: absolute;
+  text-transform: capitalize;
+  top: 277px;
+  width: 77px;
+}
+
+.favorites {
+  color: #444955;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 16px;
+  left: 84px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  position: absolute;
+  text-transform: capitalize;
+  top: 354px;
+  width: 80px;
+}
+
+.profile {
+  color: #444955;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 16px;
+  left: 84px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  position: absolute;
+  text-transform: capitalize;
+  top: 431px;
+  width: 77px;
+}
+
+.headerName {
+  color: #444955;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 16px;
+  left: 20px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  position: absolute;
+  text-transform: capitalize;
+  top: 630px;
+  width: 83px;
+}
+
+.imgLogoHeader {
+  margin-left: 30px;
+  margin-top: 30px;
+}

@@ -1,0 +1,21 @@
+.divSearch {
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  height: 720px;
+  left: 250px;
+  position: absolute;
+  top: 0px;
+  width: 1030px;
+}
+
+.sectionSearch {
+  background: #EFF3F9;
+  height: 486px;
+  left: 250px;
+  position: absolute;
+  top: 234px;
+  width: 1030px;
+}
+
+/* .formSearch {
+  background-image: url(../images/bgAzul.png);
+} */

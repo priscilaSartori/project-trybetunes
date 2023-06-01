@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import './Login.css';
+import logo from '../images/logo.png';
 
 class Login extends React.Component {
   state = {
@@ -42,17 +44,19 @@ class Login extends React.Component {
     } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="quadroBranco">
+        <img src={ logo } alt="logo" className="imgLogo" />
         <form>
           <label htmlFor="name">
-            Login
             <input
               data-testid="login-name-input"
               id="name"
               name="login"
               type="text"
               value={ login }
+              placeholder="Qual é o seu nome?"
               onChange={ this.onInputChange }
+              className="inputName"
             />
           </label>
           <button
@@ -60,6 +64,7 @@ class Login extends React.Component {
             type="button"
             disabled={ isSaveButtonDisabled }
             onClick={ this.onButtonClick }
+            className="buttonEntrar"
           >
             Entrar
           </button>
