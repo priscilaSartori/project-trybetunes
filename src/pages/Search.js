@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
-// import './Search.css';
+import './Search.css';
 
 class Search extends React.Component {
   state = {
@@ -55,7 +55,6 @@ class Search extends React.Component {
             : (
               <form className="formSearch">
                 <label htmlFor="name">
-                  Nome
                   <input
                     data-testid="search-artist-input"
                     id="name"
@@ -64,6 +63,7 @@ class Search extends React.Component {
                     value={ nome }
                     onChange={ this.onInputChange }
                     placeholder="Digite o nome da banda ou do artista"
+                    className="inputNameSearch"
                   />
                 </label>
                 <button
@@ -71,6 +71,7 @@ class Search extends React.Component {
                   type="button"
                   disabled={ isSaveButtonDisabled }
                   onClick={ this.onButtonClick }
+                  className="buttonPesquisar"
                 >
                   Pesquisar
                 </button>
@@ -84,7 +85,8 @@ class Search extends React.Component {
               {' '}
               {pesquisa}
             </h4>)}
-          {filter.length === 0 ? <h2>Nenhum álbum foi encontrado</h2>
+          {filter.length === 0
+            ? <h2 className="naoEncontrado">Nenhum álbum foi encontrado</h2>
             : (filter.map((artista) => (
               <Link
                 to={ `/album/${artista.collectionId}` }
