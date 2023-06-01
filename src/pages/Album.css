@@ -1,5 +1,4 @@
 .divQuadro {
-  /* background-image: url(../images/bgAzul1.png); */
   height: 220px;
   left: 0;
   position: relative;
@@ -16,7 +15,7 @@
   width: 1030px;
 }
 
-.imgSearch {
+.imgSearchAlbum {
   height: 320px;
   left: 250px;
   position: relative;

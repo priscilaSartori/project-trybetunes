@@ -1,0 +1,29 @@
+.divPageFavorites {
+  background: #EFF3F9;
+  height: 486px;
+  left: 250px;
+  position: absolute;
+  top: 234px;
+  width: 1030px;
+}
+
+.faixasFavorites {
+  display: flex;
+  flex-direction: column;
+  left: 180px;
+  position: relative;
+  top: 10px;
+}
+
+.textoFavoritas {
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  left: 680px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 100px;
+}

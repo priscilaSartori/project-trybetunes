@@ -65,7 +65,7 @@ class Album extends React.Component {
     return (
       <div className="divQuadro">
         <Header />
-        <img src={ bgAzul1 } alt="" width={ 1100 } className="imgSearch" />
+        <img src={ bgAzul1 } alt="" width={ 1100 } className="imgSearchAlbum" />
         <div className="divPageAlbum">
           <img src={ albumInfo.artworkUrl100 } alt="imagem album" className="imgAlbum" />
           {/* <h2 data-testid="page-album" /> */}
