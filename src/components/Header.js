@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from '../pages/Loading';
-// import './Header.css';
+import './Header.css';
 import logo from '../images/logo.png';
 import search from '../images/search.png';
 import favorite from '../images/favorite.png';
