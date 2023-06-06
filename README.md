@@ -2,11 +2,11 @@
 
 <br />
 
- ![requisito-15](src/images/)
- ![requisito-15](src/images/ImageProjeto2.png)
- ![requisito-15](src/images/ImageProjeto2.png)
- ![requisito-15](src/images/ImageProjeto2.png)
- ![requisito-15](src/images/ImageProjeto2.png)
+ ![TelaLogin](src/images/TelaLogin.png)
+ ![TelaLoading](src/images/TelaLoading.png)
+ ![TelaSearch](src/images/TelaSearch.png)
+ ![TelaAlbum](src/images/TelaAlbum.png)
+ ![TelaMusicasFavoritas](src/images/TelaMusicasFavoritas.png)
 
 <br />
 
