@@ -1,10 +1,21 @@
+.bodyFavorite {
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  height: 800px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 1800px;
+}
+
 .divPageFavorites {
   background: #EFF3F9;
   height: 486px;
   left: 250px;
   position: absolute;
   top: 234px;
-  width: 1030px;
+  width: 1530px;
 }
 
 .faixasFavorites {
@@ -26,4 +37,5 @@
   position: absolute;
   text-align: center;
   top: 100px;
+  width: 200px;
 }

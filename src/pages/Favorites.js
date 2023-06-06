@@ -24,7 +24,7 @@ class Favorites extends React.Component {
   render() {
     const { favorites, isLoading } = this.state;
     return (
-      <div>
+      <div className="bodyFavorite">
         <Header />
         <p className="textoFavoritas">Musicas Favoritas</p>
         <div data-testid="page-favorites" className="divPageFavorites">

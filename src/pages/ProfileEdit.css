@@ -1,0 +1,99 @@
+.bodyLoading {
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  height: 800px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 1700px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  bottom: 0%;
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  left: 500px;
+  line-height: 150%;
+  padding: 10px;
+  position: relative;
+  right: 83.33%;
+  top: 50px;
+  width: 200px;
+}
+
+.formProfileEdit {
+  background: #EFF3F9;
+  height: auto;
+  left: 250px;
+  position: absolute;
+  top: 234px;
+  width: 1400px;
+}
+
+.inputName {
+  align-items: center;
+  background: #F0F2F5;
+  display: flex;
+  flex-direction: row;
+  height: 37px;
+  left: 0px;
+  padding: 0px;
+  position: relative;
+  top: 0px;
+  width: 288px;
+}
+
+.inputEmail {
+  align-items: center;
+  background: #F0F2F5;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 37px;
+  left: 0px;
+  padding-left: 10px;
+  position: relative;
+  top: 0px;
+  width: 288px;
+}
+
+.inputDescription {
+  background: #FFFFFF;
+  border-radius: 20px;
+  bottom: 0%;
+  height: 106px;
+  left: 0%;
+  position: relative;
+  right: 0%;
+  top: 0%;
+  width: 490px;
+}
+
+.inputImage {
+  border-radius: 240px;
+  filter: drop-shadow(-9px 8px 8px rgba(0, 0, 0, 0.2));
+  height: 240px;
+  left: -350px;
+  position: relative;
+  top: -500px;
+  width: 240px;
+}
+
+.buttonProfileEdit {
+  background: #003BE5;
+  border-radius: 100px;
+  height: 40px;
+  left: 602px;
+  position: absolute;
+  top: 400px;
+  width: 152px;
+}

@@ -48,7 +48,7 @@ class Search extends React.Component {
     } = this.state;
 
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="pageSearch">
         <Header />
         {
           isLoading ? <Loading />

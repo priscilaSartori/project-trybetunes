@@ -12,7 +12,8 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <div className="bgAzul">
+      // <div className="bgAzul">
+      <div>
         {/* <p>TrybeTunes</p> */}
         <Switch>
           <Route exact path="/" component={ Login } />

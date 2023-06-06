@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from './Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import './ProfileEdit.css';
 
 class ProfileEdit extends React.Component {
   state = {
@@ -66,12 +67,12 @@ class ProfileEdit extends React.Component {
       evaluation,
     } = this.state;
     return (
-      <div>
+      <div className="bodyLoading">
         <Header />
         <div data-testid="page-profile-edit" />
         {isLoading ? <Loading />
           : (
-            <form>
+            <form className="formProfileEdit">
               <label htmlFor="edit-input-name">
                 Nome:
                 <input
@@ -82,6 +83,7 @@ class ProfileEdit extends React.Component {
                   placeholder="Nome"
                   value={ name }
                   onChange={ this.onInputChange }
+                  className="inputName"
                 />
               </label>
               <label htmlFor="edit-input-email">
@@ -94,6 +96,7 @@ class ProfileEdit extends React.Component {
                   placeholder="email"
                   value={ email }
                   onChange={ this.onInputChange }
+                  className="inputEmail"
                 />
               </label>
               <label htmlFor="edit-input-description">
@@ -106,10 +109,10 @@ class ProfileEdit extends React.Component {
                   placeholder="Descrição"
                   value={ description }
                   onChange={ this.onInputChange }
+                  className="inputDescription"
                 />
               </label>
               <label htmlFor="edit-input-image">
-                Image:
                 <input
                   data-testid="edit-input-image"
                   id="image"
@@ -118,6 +121,7 @@ class ProfileEdit extends React.Component {
                   placeholder="Image"
                   value={ image }
                   onChange={ this.onInputChange }
+                  className="inputImage"
                 />
               </label>
               <button
@@ -125,6 +129,7 @@ class ProfileEdit extends React.Component {
                 type="submit"
                 disabled={ evaluation }
                 onClick={ this.uptadeInfo }
+                className="buttonProfileEdit"
               >
                 Editar perfil
               </button>

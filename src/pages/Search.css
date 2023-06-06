@@ -1,5 +1,12 @@
+.pageSearch {
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  height: auto;
+  position: relative;
+  width: 1650px;
+}
+
 .formSearch {
-  background-image: url(../images/bgAzul1.png);
+  /* background-image: url(../images/bgAzul1.png); */
   height: 320px;
   left: 250px;
   position: relative;
@@ -16,13 +23,13 @@
   font-style: normal;
   font-weight: 400;
   height: 40px;
-  left: 250px;
+  left: -250px;
   letter-spacing: 0.03em;
   line-height: 14px;
   padding-left: 30px;
   position: absolute;
   text-transform: uppercase;
-  top: 97px;
+  top: 45px;
   width: 400px;
 }
 
@@ -65,7 +72,7 @@
   position: absolute;
   text-align: center;
   top: 0;
-  width: 1032px;
+  width: 1400px;
 }
 
 .sectionSearch {
@@ -74,7 +81,7 @@
   left: 250px;
   position: absolute;
   top: 234px;
-  width: 1030px;
+  width: 1400px;
 }
 
 .divAlbum {

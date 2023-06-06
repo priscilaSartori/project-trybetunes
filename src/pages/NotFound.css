@@ -1,4 +1,4 @@
-.bodyLoading {
+.bodyNotFound {
   background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
   height: 800px;
   left: 0;
@@ -9,16 +9,15 @@
   width: 1500px;
 }
 
-.loading {
-  color: white;
+.NotFound {
+  /* color: white; */
   left: 780px;
   position: absolute;
   top: 150px;
 }
 
-.imgLoading {
+.imgNotFound {
   left: 750px;
   position: absolute;
   top: 300px;
 }
-

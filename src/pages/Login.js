@@ -44,32 +44,34 @@ class Login extends React.Component {
     } = this.state;
 
     return (
-      <div data-testid="page-login" className="quadroBranco">
-        <img src={ logo } alt="logo" className="imgLogo" />
-        <form>
-          <label htmlFor="name">
-            <input
-              data-testid="login-name-input"
-              id="name"
-              name="login"
-              type="text"
-              value={ login }
-              placeholder="Qual é o seu nome?"
-              onChange={ this.onInputChange }
-              className="inputName"
-            />
-          </label>
-          <button
-            data-testid="login-submit-button"
-            type="button"
-            disabled={ isSaveButtonDisabled }
-            onClick={ this.onButtonClick }
-            className="buttonEntrar"
-          >
-            Entrar
-          </button>
-          {isLoading && <Loading />}
-        </form>
+      <div className="bodyLogin">
+        <div data-testid="page-login" className="quadroBranco">
+          <img src={ logo } alt="logo" className="imgLogo" />
+          <form>
+            <label htmlFor="name">
+              <input
+                data-testid="login-name-input"
+                id="name"
+                name="login"
+                type="text"
+                value={ login }
+                placeholder="Qual é o seu nome?"
+                onChange={ this.onInputChange }
+                className="inputName"
+              />
+            </label>
+            <button
+              data-testid="login-submit-button"
+              type="button"
+              disabled={ isSaveButtonDisabled }
+              onClick={ this.onButtonClick }
+              className="buttonEntrar"
+            >
+              Entrar
+            </button>
+            {isLoading && <Loading />}
+          </form>
+        </div>
       </div>
     );
   }

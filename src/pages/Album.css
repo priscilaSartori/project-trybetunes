@@ -1,18 +1,22 @@
 .divQuadro {
-  height: 220px;
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  /* height: 800px; */
+  height: auto;
   left: 0;
+  margin: 0;
+  padding: 0;
   position: relative;
-  top: 0px;
-  width: 1200px;
+  top: 0;
+  width: 1650px;
 }
 
 .divPageAlbum {
   background: #EFF3F9;
   height: auto;
   left: 250px;
-  position: absolute;
+  position: relative;
   top: 234px;
-  width: 1030px;
+  width: 1400px;
 }
 
 .imgSearchAlbum {
@@ -67,6 +71,7 @@
   flex-direction: column;
   left: 350px;
   position: relative;
+  width: 600px;
 }
 
 .linha {
@@ -80,6 +85,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+  width: 800px;
 }
 
 .h4faixa {

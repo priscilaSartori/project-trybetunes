@@ -1,0 +1,98 @@
+.bodyProfile {
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+  height: 800px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 1800px;
+}
+
+.divProfile {
+  background: #EFF3F9;
+  height: 500px;
+  left: 250px;
+  position: absolute;
+  top: 234px;
+  width: 1400px;
+}
+
+.profileNome {
+  bottom: 0%;
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  left: 450px;
+  line-height: 150%;
+  position: relative;
+  right: 0%;
+  top: 0%;
+}
+
+.profileEmail {
+  bottom: 0%;
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  left: 450px;
+  line-height: 150%;
+  position: relative;
+  right: 0%;
+  top: 0%;
+}
+
+.profileDescription {
+  bottom: 0%;
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 131px;
+  left: 602px;
+  line-height: 150%;
+  position: relative;
+  right: 0%;
+  top: 423px;
+  width: 490px;
+}
+
+.profileImage {
+  border-radius: 240px;
+  filter: drop-shadow(-9px 8px 8px rgba(0, 0, 0, 0.2));
+  height: 240px;
+  left: 200px;
+  position: relative;
+  top: -350px;
+  width: 240px;
+}
+
+.profilebutton {
+  background: #003BE5;
+  border-radius: 100px;
+  color: white;
+  height: 40px;
+  left: 400px;
+  position: relative;
+  top: 50px;
+  width: 152px;
+}
+
+p {
+  bottom: 0%;
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  left: 450px;
+  line-height: 150%;
+  position: relative;
+  right: 83.33%;
+  top: 0%;
+}
