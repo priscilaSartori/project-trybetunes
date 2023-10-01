@@ -1,6 +1,9 @@
 .bodyLogin {
   background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
-  height: 700px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quadroBranco {
@@ -8,9 +11,9 @@
   border-radius: 20px;
   box-shadow: 0px 0px 26px rgba(68, 73, 85, 0.2);
   height: 450px;
-  left: 430px;
+  /* left: 430px; */
   position: absolute;
-  top: 135px;
+  /* top: 135px; */
   width: 750px;
 }
 
@@ -22,7 +25,7 @@
   width: 187.19px;
 }
 
-.inputName {
+.for-inputName {
   border: 1px solid #003BE5;
   border-radius: 100px;
   box-sizing: border-box;
@@ -32,11 +35,11 @@
   font-style: normal;
   font-weight: 400;
   height: 40px;
-  left: 180px;
+  left: -320px;
   line-height: 14px;
   position: absolute;
   text-align: center;
-  top: 250px;
+  top: 80px;
   width: 400px;
 }
 

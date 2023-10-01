@@ -57,7 +57,7 @@ class Login extends React.Component {
                 value={ login }
                 placeholder="Qual é o seu nome?"
                 onChange={ this.onInputChange }
-                className="inputName"
+                className="for-inputName"
               />
             </label>
             <button

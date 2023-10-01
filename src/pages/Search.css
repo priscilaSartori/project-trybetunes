@@ -2,7 +2,7 @@
   background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
   height: auto;
   position: relative;
-  width: 1650px;
+  width: 100%;
 }
 
 .formSearch {
@@ -81,7 +81,7 @@
   left: 250px;
   position: absolute;
   top: 234px;
-  width: 1400px;
+  width: 81.5%;
 }
 
 .divAlbum {
