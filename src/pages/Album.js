@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/heading-has-content */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
@@ -6,7 +7,7 @@ import MusicCard from '../components/MusicCard';
 import Loading from './Loading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import './Album.css';
-import bgAzul1 from '../images/bgAzul1.png';
+// import bgAzul1 from '../images/bgAzul1.png';
 
 class Album extends React.Component {
   state = {

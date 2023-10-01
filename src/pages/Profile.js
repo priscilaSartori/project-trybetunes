@@ -36,9 +36,20 @@ class Profile extends React.Component {
               <h2 className="profileEmail">{dados.email}</h2>
               <p>Descrição</p>
               <h2 className="profileDescription">{dados.description}</h2>
-              <img src={ dados.image } alt="profile" data-testid="profile-image" className="profileImage" />
+              <img
+                src={ dados.image }
+                alt="profile"
+                data-testid="profile-image"
+                className="profileImage"
+              />
               <Link to="/profile/edit">
-                <button type="button" id="edit" className="profilebutton">Editar perfil</button>
+                <button
+                  type="button"
+                  id="edit"
+                  className="profilebutton"
+                >
+                  Editar perfil
+                </button>
               </Link>
             </div>
           )}
